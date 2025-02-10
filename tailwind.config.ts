@@ -1,16 +1,18 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        accent: "#026CFF",
+        navbg: "#E6E6E6",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+      maxWidth: {
+        navbar: "1628px",
       },
     },
   },
