@@ -7,6 +7,7 @@ export default {
       colors: {
         accent: "#026CFF",
         navbg: "rgba(230, 230, 230, 0.97)",
+        background: "#EEEEEE",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
