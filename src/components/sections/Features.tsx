@@ -26,8 +26,8 @@ export default function Features() {
 
   return (
     <div className="">
-      <div className="container mx-auto px-4 ">
-        <hr className="border-t border-gray-400 my-20" />
+      <div className="container w-[65%] mx-auto px-4 ">
+        <hr className="border-t border-gray-400 my-10" />
         <div className="h-[224px] grid grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
@@ -42,7 +42,7 @@ export default function Features() {
             </div>
           ))}
         </div>
-        <hr className="border-t border-gray-400 my-20" />
+        <hr className="border-t border-gray-400 my-10" />
       </div>
     </div>
   );
