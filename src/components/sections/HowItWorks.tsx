@@ -1,8 +1,5 @@
 import Image from "next/image";
 import clickThroughRate from "@/assets/click-through-rate.png";
-// Import SVGs as React components
-import SetupIcon from "@/assets/setup-in-60.svg";
-import EnjoyIcon from "@/assets/enjoy-fast-internet.svg";
 
 export default function HowItWorks() {
   const steps = [
@@ -16,15 +13,15 @@ export default function HowItWorks() {
     },
     {
       step: "Step 2",
-      icon: SetupIcon,
-      type: "svg",
+      icon: clickThroughRate,
+      type: "image",
       title: "Setup in 60 seconds",
       description: "No external antennas or technicians required",
     },
     {
       step: "Step 3",
-      icon: EnjoyIcon,
-      type: "svg",
+      icon: clickThroughRate,
+      type: "image",
       title: "Enjoy fast internet",
       description:
         "Connect your devices and enjoy unlimited streaming, browsing, and gaming",
@@ -40,35 +37,19 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="text-left bg-[#F8F8F8] rounded-[32px] py-12 px-8 w-[365px] h-[331px]"
+              className="text-left bg-[#F8F8F8] rounded-[32px] py-12 px-8 w-[365px] h-[400px]" // Increased height
             >
               <p className="text-sm font-medium mb-8 italic underline decoration-1">
                 {step.step}
               </p>
               <div className="relative mb-8 flex">
-                {step.type === "image" ? (
-                  <Image
-                    src={step.icon}
-                    alt={step.title}
-                    width={32}
-                    height={32}
-                    className="h-12 w-12" // 48px
-                  />
-                ) : (
-                  <div className="w-12 h-12 overflow-hidden">
-                    {" "}
-                    {/* 48px container */}
-                    <step.icon
-                      width="12"
-                      height="12"
-                      className="text-[#0066FF] object-contain"
-                      style={{
-                        transform: "scale(0.75)", // Scale down to fit
-                        transformOrigin: "center",
-                      }}
-                    />
-                  </div>
-                )}
+                <Image
+                  src={step.icon}
+                  alt={step.title}
+                  width={48}
+                  height={48}
+                  className="h-12 w-12"
+                />
                 {index < steps.length - 1 && (
                   <div className="absolute top-1/2 -right-4 w-8 h-[2px]">
                     <div className="w-full h-full border-t-2 border-dashed border-gray-300" />
