@@ -8,6 +8,7 @@ import WhyChooseDetails from "@/components/sections/WhyChooseDetails";
 import WhyAhead from "@/components/sections/WhyAhead";
 import HowItWorks from "@/components/sections/HowItWorks";
 import TestimonialsSlider from "@/components/sections/TestimonialsSlider";
+import WhoIsItFor from "@/components/sections/WhoIsItFor";
 
 // Explicitly type the component as React.FC
 const Home: React.FC = () => {
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
       <WhyAhead />
       <HowItWorks />
       <TestimonialsSlider />
+      <WhoIsItFor />
     </main>
   );
 };
