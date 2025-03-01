@@ -42,7 +42,7 @@ export default function WhoIsItFor() {
               key={index}
               className="bg-white rounded-lg overflow-hidden shadow-md"
             >
-              <div className="relative h-[240px] w-full">
+              <div className="relative h-[340px] w-full">
                 <Image
                   src={category.image}
                   alt={category.title}
@@ -51,14 +51,20 @@ export default function WhoIsItFor() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-3xl font-medium mb-3">{category.title}</h3>
-                <p className="text-gray-600 mb-6">{category.description}</p>
-                <a
-                  href={category.learnMoreLink}
-                  className="block w-full bg-blue-500 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors"
-                >
-                  Learn more
-                </a>
+                <div className="h-36">
+                  <h3 className="text-3xl font-medium mb-3">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">{category.description}</p>
+                </div>
+                <div>
+                  <a
+                    href={category.learnMoreLink}
+                    className="block w-full bg-blue-500 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors"
+                  >
+                    Learn more
+                  </a>
+                </div>
               </div>
             </div>
           ))}
